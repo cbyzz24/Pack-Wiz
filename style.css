@@ -1,0 +1,135 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: rgb(93, 170, 185);
+    background: linear-gradient(90deg, rgba(93, 170, 185, 1) 0%, rgb(159, 223, 236) 50%, rgba(93, 170, 185, 1) 100%);
+    --text-color: #242529;
+    --accent-color: #f2f9fa;
+    --secondary-color: rgb(189, 187, 187);
+    --widgit-color: #1e90ff;
+}
+
+.appName{
+    color: var(--text-color);
+    text-align: center;
+}
+
+.mainWrapper{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}
+
+.controlsWrapper{
+    box-sizing: border-box;
+    align-items: center;
+    width: 380px;
+    /* border: 1px solid black; */
+    position: relative;
+
+
+}
+
+.inputRow{
+    text-align: center;
+}
+
+.taskInput{
+    padding-left: 10px;
+    width: 360px;
+    height: 35px;
+    font-size: 1.1rem;
+    border: 2px solid var(--text-color);
+    border-radius: 15px;
+}
+
+.addTask{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 5px;
+    margin-right: 10px;
+    height: 30px;
+    width: 50px;
+    background-color: var(--widgit-color);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+.addTask:hover{
+    /* background-color: hsl(210, 100%, 76%); */
+    background-color: hsla(160, 87%, 40%, 0.808);
+
+}
+
+
+ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 5px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    font-size: 1.18rem;
+    padding: 5px 10px;
+}
+
+
+.itemCheckBox{
+    display: none;
+}
+
+
+.checkBoxIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    border: solid 2px #242529;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.checkBoxIcon:hover{
+    fill: black;
+    background-color: var(--widgit-color);
+}
+
+#itemText{
+    flex-grow: 1;
+    width: 100%;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+#itemText:hover{
+    /* background-color: hsla(180, 100%, 50%, 0.301); */
+    /* background-color: hsla(212, 15%, 77%, 0.479); */
+    /* background-color: hsla(210, 100%, 76%, 0.644); */
+    background-color: rgba(127, 255, 212, 0.50);
+
+}
+
+svg.deleteIcon{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 300ms ease;
+    /* position: absolute;
+    right: 0px; */
+    
+}
+
+svg.deleteIcon:hover{
+    fill: red;
+}
