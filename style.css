@@ -43,6 +43,7 @@ body{
     font-size: 1.1rem;
     border: 2px solid var(--text-color);
     border-radius: 15px;
+    background-color: #ffffff;
 }
 
 .addTask{
@@ -66,21 +67,41 @@ body{
 
 }
 
+.controlsWrapper{
+    /* background-color: #ffffff; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.listDisplay{
+    box-sizing: border-box;
+    background-color:azure;
+    border-radius: 8px;
+    min-height: 50px;
+    width: 360px;
+    margin-top: 8px;
+    box-shadow: #242529 2px 4px 8px;
+}
 
 ul{
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding-left: 5px;
+    padding: 8px;
+    
 }
 
 li{
     display: flex;
     align-items: center;
     font-size: 1.18rem;
-    padding: 5px 30px;
+    list-style: none;
+    /* padding: 5px 30px; */
+    padding: 5px 25px 5px 35px;
     position: relative;
+    cursor: pointer;
 }
 
 li::before{
@@ -98,8 +119,16 @@ li::before{
     left: 2px;
 }
 
+li.checked{
+    text-decoration: line-through;
+}
 
-li::after{
+li.checked::before{
+    background-image: url(images/circle_checked.png);
+}
+
+
+/* li::after{
     content: "";
     position:absolute;
     height: 25px;
@@ -111,5 +140,10 @@ li::after{
     cursor: pointer;
     top: 5px;
     right: 2px;
-}
+} */
 
+span{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
